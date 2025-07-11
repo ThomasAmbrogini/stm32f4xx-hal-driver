@@ -2983,6 +2983,16 @@ __STATIC_INLINE uint32_t LL_RCC_HSE_IsOn(void)
 }
 
 /**
+  * @brief  Check if HSE oscillator is on
+  * @rmtoll CR           HSEON            LL_RCC_HSE_IsOn
+  * @retval State of bit (1 or 0).
+  */
+__STATIC_INLINE uint32_t LL_RCC_HSI_IsOn(void)
+{
+  return (READ_BIT(RCC->CR, RCC_CR_HSION) == (RCC_CR_HSION));
+}
+
+/**
   * @}
   */
 
